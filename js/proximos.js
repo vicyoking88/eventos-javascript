@@ -24,9 +24,9 @@ $(document).ready(function () {
     //Ordena los eventos segun la fecha (los mas cercanos primero)
     proximos = proximos.sort(function (x, y) {
       if (x.fecha < y.fecha) {
-        return 1;
+        return -1;
       }
-      return -1;
+        return 1;
     });
     //Crea un string que contenga el HTML que describe el detalle del evento
     var html = "";
@@ -34,7 +34,9 @@ $(document).ready(function () {
     for (var j = 0; j < proximos.length; j++) {
       html += ` 
       <div class="rounded col-12 bg-light px-4 py-2 my-3">
-      <h2 class="text-primary">${proximos[j].nombre}</h2>
+      <a class="text-primary" href="detalle.html?id=${proximos[j].id}">
+      <h2>${proximos[j].nombre}</h2>
+      </a>
       <p class="text-secondary">${proximos[j].fecha} - ${proximos[j].lugar}</p>
       <p>${proximos[j].descripcion}</p>
       <p class="text-info">Costo : ${proximos[j].precio}</p>

@@ -30,9 +30,9 @@ $(document).ready(function () {
     //Ordena los eventos segun la fecha (los mas cercanos primero)
     proximos = proximos.sort(function (x, y) {
       if (x.fecha < y.fecha) {
-        return 1;
+        return -1;
       }
-      return -1;
+        return 1;
     });
     //Extrae solo dos eventos
     console.log(proximos);
@@ -44,7 +44,7 @@ $(document).ready(function () {
       if (x.fecha < y.fecha) {
         return 1;
       }
-      return -1;
+        return -1;
     });
 
     //Extrae solo dos eventos
@@ -59,7 +59,7 @@ $(document).ready(function () {
     for (var j = 0; j < top2Proximos.length; j++) {
       html1 += ` 
       <div class="rounded col bg-light px-4 py-2 mr-4">
-      <div class="row text-primary"><h2>${top2Proximos[j].nombre}</h2></div>
+      <a class="row text-primary" href="detalle.html?id=${top2Proximos[j].id}"><h2>${top2Proximos[j].nombre}</h2></a>
       <div class="row text-secondary">${top2Proximos[j].fecha}</div>
       <div class="row">${top2Proximos[j].descripcion}</div>
       </div>
@@ -74,7 +74,9 @@ $(document).ready(function () {
     for (var j = 0; j < top2Pasados.length; j++) {
       html2 += ` 
       <div class="col rounded bg-light px-4 py-2 mr-4">
-      <div class="row text-primary"><h2>${top2Pasados[j].nombre}</h2></div>
+      <a class="row text-primary" href="detalle.html?id=${top2Pasados[j].id}">
+      <h2>${top2Pasados[j].nombre}</h2>
+      </a>
       <div class="row text-secondary">${top2Pasados[j].fecha}</div>
       <div class="row">${top2Pasados[j].descripcion}</div>
       </div>

@@ -34,7 +34,9 @@ eventos = eventosOb.eventos;
   for (var j = 0; j < pasados.length; j++) {
     html += ` 
     <div class="rounded col-12 bg-light px-4 py-2 my-3">
-    <h2 class="text-primary">${pasados[j].nombre}</h2>
+    <a class="text-primary" href="detalle.html?id=${pasados[j].id}">
+    <h2>${pasados[j].nombre}</h2>
+    </a>
     <p class="text-secondary">${pasados[j].fecha} - ${pasados[j].lugar}</p>
     <p>${pasados[j].descripcion}</p>
     <p class="text-info">Costo : ${pasados[j].precio}</p>
