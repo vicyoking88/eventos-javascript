@@ -7,7 +7,7 @@ $(document).ready(function () {
 
   //Carga los datos que estan en el JSON (info.json) usando AJAX
   $.ajax({
-    url: "http://127.0.0.1:5501/ajax/ejer_1/info.json"
+    url: "http://127.0.0.1:5500/info.json"
   }).done(function (resultado) {
     //Guarda el resultado en una variable
     eventos = resultado.eventos;
