@@ -1,6 +1,6 @@
 # Web event manager
 
-Web para administrar eventos en una institución. utilizando HTML, CSS, Bootstrap Y Javascript.
+Web para administrar eventos en una institución. utilizando HTML, CSS, Bootstrap Y Javascript, jquery.
 
 ## Implementation
 
@@ -10,4 +10,4 @@ Web para administrar eventos en una institución. utilizando HTML, CSS, Bootstra
 
 ## Note
 
-- aplicacion usando jquery, bootstrap, javascript, html, css. Permite cargar en la vista los eventos para determinada institución.
+- En el archivo raiz `info.json` puedes agregar o modificar eventos para realizar pruebas al igual que la fecha de referencia.
